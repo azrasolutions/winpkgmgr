@@ -18,11 +18,6 @@ Function Test-PackageExistence
 {}
 	
 
-Function Skip-Install
-
-{
-	
-
 try {
 
 	Add-AppPackage -path '.\VCPlusPlus2015.appx';
