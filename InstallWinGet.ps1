@@ -93,7 +93,7 @@ Delete-TempFiles;
 
 if ($flagReboot -eq '1')
 
-Write-Warning -Message "Your PC needs to be rebooted. Please reboot ASAP."
+{Write-Warning -Message "Your PC needs to be rebooted. Please reboot ASAP."}
 
 }
 
