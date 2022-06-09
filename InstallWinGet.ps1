@@ -35,7 +35,7 @@ Function Delete-TempFiles
 	Remove-item -Include $file -path .\
 	
 	}
-	
+}	
 	
 try {
 
