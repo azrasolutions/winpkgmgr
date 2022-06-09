@@ -32,9 +32,15 @@ catch
 
 {
 	$specificexception = $Error.Exception.GetType().FullName
-}
-
-fianlly 
+	
+	foreach ($error in specificexception)
+	
+	{
+	$specificexception
+	}
+	
+	
+	fianlly 
 
 {
 	
