@@ -50,3 +50,5 @@ Import-Module 'nuget','winget','packagemanagement' -force;
 Set-PackageSource -Name 'PSGallery' -Trusted -ForceBootStrap -providername 'powershellget' }
 
 }
+
+}
