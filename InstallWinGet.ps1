@@ -1,4 +1,4 @@
-powershell -executionpolicy bypass -command { ${$ConfirmPreference:"high"}}; 
+powershell -executionpolicy bypass -command { ${$ConfirmPreference:"high"}; 
 
 set-location $env:TEMP; 
 
@@ -47,8 +47,6 @@ Install-Module 'nuget','winget','powershellget' -force;
 
 Import-Module 'nuget','winget','packagemanagement' -force; 
 
-Set-PackageSource -Name 'PSGallery' -Trusted -ForceBootStrap -providername 'powershellget' }
-
-}
+Set-PackageSource -Name 'PSGallery' -Trusted -ForceBootStrap -providername 'powershellget';
 
 }
