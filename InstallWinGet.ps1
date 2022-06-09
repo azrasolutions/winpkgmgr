@@ -1,5 +1,5 @@
 $WarningPreference='Continue'
-
+Clear-Host;
 set-location $env:TEMP; 
 
 iwr https://aka.ms/install-powershell.ps1 -OutFile "install-powershell.ps1"; 
