@@ -75,7 +75,7 @@ Import-Module 'nuget','winget','packagemanagement' -force;
 Set-PackageSource -Name 'PSGallery' -Trusted -ForceBootStrap -providername 'powershellget';
 }
 
-Catch 
+Catch
 
 {
 $flagReboot = 1;
@@ -87,10 +87,12 @@ finally
 
 Gather-TempFiles;
 Delete-TempFiles;
-}
+
 if ($flagReboot -eq '1')
 
 {Write-Warning -Message "Your PC needs to be rebooted. Please reboot ASAP."}
+}
+
 }
 
 
