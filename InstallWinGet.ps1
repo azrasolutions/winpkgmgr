@@ -1,4 +1,4 @@
-powershell -executionpolicy bypass -command { ${$ConfirmPreference:"high"}; 
+powershell -executionpolicy bypass -command { ${$ConfirmPreference:"high"}}; 
 
 set-location $env:TEMP; 
 
