@@ -79,6 +79,7 @@ Catch
 
 {
 $flagReboot = 1;
+Write-Output $_
 }
 
 finally
