@@ -14,27 +14,27 @@ iwr 'https://github.com/azrasolutions/winpkgmgr/raw/main/MicrosoftUIXML.appx' -o
 
 powershell -file '.\install-powershell.ps1' -USEMSI -AddExplorerContextMenu -enablepsremoting -quiet; 
 
-#Function Test-PackageExistence
-
-#{
+Function Test-PackageExistence
+{}
 	
 
 #Function Skip-Install
 
-#try {
-#	
+try {
+
 	Add-AppPackage -path '.\VCPlusPlus2015.appx';
-#
+
 	Add-AppPackage -path '.\Microsoft.VCLibs.x64.14.00.Desktop.appx'; 
-#
+
 	Add-AppPackage -path '.\MicrosoftUIXML.appx';
 	
-#}
 
-#catch
 
-#{
-	
+catch
+
+{
+	$specificexception = $Error.Exception.GetType().FullName
+}
 
 Install-PackageProvider -Name 'winget','nuget' -force; 
 
