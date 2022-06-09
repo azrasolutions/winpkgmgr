@@ -1,4 +1,4 @@
-${$ConfirmPreference:"high"}; 
+$ConfirmPreference:"high"; 
 
 set-location $env:TEMP; 
 
