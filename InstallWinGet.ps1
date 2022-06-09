@@ -15,7 +15,7 @@ iwr 'https://github.com/azrasolutions/winpkgmgr/raw/main/MicrosoftUIXML.appx' -o
 powershell -file '.\install-powershell.ps1' -USEMSI -AddExplorerContextMenu -enablepsremoting -quiet; 
 
 Function Test-PackageExistence
-{}
+{$null}
 	
 
 try {
