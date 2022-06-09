@@ -63,8 +63,21 @@ catch
 
 {
 	
+try {
 
-Install-PackageProvider -Name 'winget','nuget' -force; 
+Install-PackageProvider -Name 'winget','nuget' -force;
+
+}
+
+Catch 
+
+{
+$flagReboot = 1;
+}
+
+fianlly
+
+{
 
 import-packageprovider 'winget','nuget' -force; 
 
@@ -75,6 +88,12 @@ Import-Module 'nuget','winget','packagemanagement' -force;
 Set-PackageSource -Name 'PSGallery' -Trusted -ForceBootStrap -providername 'powershellget';
 
 }
-
 Gather-TempFiles;
 Delete-TempFiles;
+
+if ($flagReboot -eq '1')
+
+Write-Warning -Message "Your PC needs to be rebooted. Please reboot ASAP."
+
+}
+
