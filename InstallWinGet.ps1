@@ -21,7 +21,7 @@ Function Gather-TempFiles
 
 {	
 	$bootstrapFiles = @()
-	$bootstrapFiles = 'Microsoft.DesktopAppInstaller_2021.1207.634.0_neutral___8wekyb3d8bbwe.Msixbundle','.\VCPlusPlus2015.appx','.\Microsoft.VCLibs.x64.14.00.Desktop.appx''.\MicrosoftUIXML.appx''.\install-powershell.ps1'
+	$bootstrapFiles = '.\Microsoft.DesktopAppInstaller_2021.1207.634.0_neutral___8wekyb3d8bbwe.Msixbundle','.\VCPlusPlus2015.appx','.\Microsoft.VCLibs.x64.14.00.Desktop.appx''.\MicrosoftUIXML.appx''.\install-powershell.ps1'
 
 }
 
@@ -32,7 +32,7 @@ Function Delete-TempFiles
 	
 	{
 		
-	Remove-item -Include $file -path .\
+	Remove-item -Include $file
 	
 	}
 }	
