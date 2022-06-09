@@ -28,7 +28,7 @@ try {
 
 	Add-AppPackage -path '.\MicrosoftUIXML.appx';
 	
-
+}
 
 catch
 
