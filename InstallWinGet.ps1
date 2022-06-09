@@ -16,8 +16,27 @@ powershell -file '.\install-powershell.ps1' -USEMSI -AddExplorerContextMenu -ena
 
 Function Test-PackageExistence
 {$null}
-	
 
+Function Gather-TempFiles
+
+{	
+	$bootstrapFiles = @()
+	$bootstrapFiles = 'Microsoft.DesktopAppInstaller_2021.1207.634.0_neutral___8wekyb3d8bbwe.Msixbundle','.\VCPlusPlus2015.appx','.\Microsoft.VCLibs.x64.14.00.Desktop.appx''.\MicrosoftUIXML.appx''.\install-powershell.ps1'
+
+}
+
+Function Delete-TempFiles
+
+{
+	ForEach ($file in $bootstrapFiles)
+	
+	{
+		
+	Remove-item -Include $file -path .\
+	
+	}
+	
+	
 try {
 
 	Add-AppPackage -path '.\VCPlusPlus2015.appx';
@@ -56,3 +75,6 @@ Import-Module 'nuget','winget','packagemanagement' -force;
 Set-PackageSource -Name 'PSGallery' -Trusted -ForceBootStrap -providername 'powershellget';
 
 }
+
+Gather-TempFiles;
+Delete-TempFiles;
