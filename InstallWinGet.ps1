@@ -1,4 +1,4 @@
-
+$WarningPreference='Stop'
 
 set-location $env:TEMP; 
 
@@ -33,7 +33,7 @@ catch
 {
 	$specificexception = $Error.Exception.GetType().FullName
 	
-	foreach ($error in specificexception)
+	foreach ($error in $specificexception)
 	
 	{
 	$error
