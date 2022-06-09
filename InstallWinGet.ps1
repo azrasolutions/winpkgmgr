@@ -36,7 +36,7 @@ catch
 	foreach ($error in specificexception)
 	
 	{
-	$specificexception
+	$error
 	}
 	
 	
