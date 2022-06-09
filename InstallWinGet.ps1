@@ -75,7 +75,7 @@ Catch
 $flagReboot = 1;
 }
 
-fianlly
+finally
 
 {
 
