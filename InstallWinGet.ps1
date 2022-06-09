@@ -1,4 +1,4 @@
-$WarningPreference='Stop'
+$WarningPreference='Continue'
 
 set-location $env:TEMP; 
 
