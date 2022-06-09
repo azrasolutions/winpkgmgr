@@ -18,7 +18,10 @@ Function Test-PackageExistence
 {}
 	
 
-#Function Skip-Install
+Function Skip-Install
+
+{
+	
 
 try {
 
@@ -36,6 +39,11 @@ catch
 	$specificexception = $Error.Exception.GetType().FullName
 }
 
+fianlly 
+
+{
+	
+
 Install-PackageProvider -Name 'winget','nuget' -force; 
 
 import-packageprovider 'winget','nuget' -force; 
@@ -46,3 +54,4 @@ Import-Module 'nuget','winget','packagemanagement' -force;
 
 Set-PackageSource -Name 'PSGallery' -Trusted -ForceBootStrap -providername 'powershellget' }
 
+}
