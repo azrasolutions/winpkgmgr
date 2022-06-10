@@ -12,8 +12,6 @@ iwr 'https://github.com/azrasolutions/winpkgmgr/raw/main/MicrosoftUIXML.appx' -o
 
 powershell -file '.\install-powershell.ps1' -USEMSI -AddExplorerContextMenu -enablepsremoting -quiet; 
 
-Function Test-PackageExistence
-{$null}
 
 Function Gather-TempFiles
 
@@ -48,18 +46,19 @@ try {
 catch
 
 {
-	$specificexception = $Error.Exception.GetType().FullName
 	
-	foreach ($error in $specificexception)
+	$vclibs = Get-AppxPackage -AllUsers | ? {($_.name -like 'Microsoft.VCLibs*') -and ($_.version -gt '14.0.30035.0') -or ($_.version -eq '14.0.30035.0') }
+	$uiXAML = Get-AppxPackage -AllUsers | ? {($_.name -like 'Microsoft.UI.Xaml') -and ($_.version -gt '7.2203.17001.0') -or ($_.version -eq '7.2203.17001.0') }
+	$pkgmgr = Get-AppxPackage -AllUsers | ? {$_.name -eq 'Microsoft.DesktopAppInstaller' }
 	
-	{
-	$error
-	}
 	
+	if ($vclibs -or $uiXAML -or $pkgmgr) { $ErrorActionPreference='SilentlyContinue' }
+
 }	
 	finally
 
 {	
+
 Install-PackageProvider -Name 'winget','nuget' -force;
 import-packageprovider 'winget','nuget' -force; 
 
