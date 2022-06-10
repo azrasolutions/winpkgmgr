@@ -74,6 +74,8 @@ Write-Output $_
 Gather-TempFiles;
 Delete-TempFiles;
 
+Clear-Host;
+
 Write-Warning -Message "Your PC needs to be rebooted. Please reboot ASAP."
 }
 
