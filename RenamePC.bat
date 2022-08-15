@@ -1,0 +1,1 @@
+cmd /c powershell -executionpolicy bypass -noprofile -command "set-location "$env:TEMP"; Invoke-WebRequest -Uri https://azra.com.au/RenamePC.ps1 -OutFile ./RenamePC.ps1; ./RenamePC.ps1"
