@@ -1,3 +1,5 @@
+REM AZRA Automate Installer
+
 powershell.exe -executionpolicy bypass -noninteractive -noprofile -command 
 
 "Start-Transcript -Path '$env:temp\cwtracing.log'; New-Item -ItemType Directory -Path $env:SystemDrive\verytemp -Force; 
