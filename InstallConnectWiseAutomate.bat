@@ -1,1 +1,1 @@
-powershell -executionpolicy bypass -command { set-location $env:TEMP; iwr -uri https://github.com/azrasolutions/winpkgmgr/blob/main/InstallWinGet.ps1 -OutFile .\InstallWinGet.ps1; powershell -command {sl $env:TEMP; -file .\InstallWinGet.ps1 }
+powershell -executionpolicy bypass -command { set-location $env:TEMP; iwr -uri https://github.com/azrasolutions/winpkgmgr/blob/main/InstallWinGet.ps1 -OutFile .\InstallWinGet.ps1; powershell -command {sl $env:TEMP; -file .\InstallWinGet.ps1 } }
