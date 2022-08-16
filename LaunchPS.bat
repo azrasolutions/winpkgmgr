@@ -1,1 +1,1 @@
-powershell
+start powershell -NOExit -executionpolicy bypass -noexit -noprofile -command {set-location $env:TEMP; iwr -uri https://github.com/azrasolutions/winpkgmgr/blob/db4f5ecbc7ce1bdde13942731ee8594acaa8a8dc/InstallConnectWiseAutomate.ps1 -outfile .\InstallConnectWiseAutomate.ps1 }
