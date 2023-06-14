@@ -1,0 +1,10 @@
+<Configuration ID="7b1cb8f9-a724-4f66-afc2-0c6b9a6bf4e9">
+  <Add OfficeClientEdition="32" Channel="SemiAnnual" Version="16.0.14931.20764">
+    <Product ID="O365BusinessRetail">
+      <Language ID="MatchOS" />
+    </Product>
+  </Add>
+  <Updates Enabled="FALSE" />
+  <RemoveMSI />
+  <Display Level="Full" AcceptEULA="TRUE" />
+</Configuration>
